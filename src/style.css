@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .required-label::after {
+    content: " *";
+    color: green;
+  }
+}
+
+@layer utilities {
+  .input-general {
+    @apply w-full px-4 py-2 border-2 border-green1 rounded-lg focus:outline-none focus:ring-2 focus:ring-green2;
+  }
+  .label {
+    @apply block text-gray-700 text-sm font-karla;
+  }
+}
